@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hawkeye | TraffickTips</title>
+	<script charset="UTF-8" type="text/javascript" src="https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&s=1"></script>
+	<style>
+		body { margin: 0; font: 12pt/1.5 sans-serif; }
+		#mapDiv { position: fixed; top: 50px; left: 0; bottom: 0; right: 0; }
+		header { padding: 15px; line-height: 20px; background: #333; font-size: 120%; color: #FFF; }
+	</style>
+</script>
+</head>
+<body>
+	<header>
+		TrafficTips HawkEye
+	</header>
+	<div id='mapDiv'></div>
+	<script type="text/javascript">
+		(function () {
+			function GetMap() {
+				var map = new Microsoft.Maps.Map(document.getElementById("mapDiv"), {
+					credentials:"Au_kHqNbZbddwJUaoPTz-tfjHTfZtuPYiBifygz7YU3Y8QpyERxo_Qs2tnitGcGn",
+					center: new Microsoft.Maps.Location(45.5, -122.5),
+                    mapTypeId: Microsoft.Maps.MapTypeId.road,
+                    zoom: 10
+				});
+			}
+	
+			window.onload=GetMap;
+		}());
+	</script>
+</body>
+</html>
